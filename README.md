@@ -3,6 +3,8 @@
 The RAL Data Centre VR Experience is a Unity driven VR application to be run through SteamVR, presenting a recreation of the Rutherford Appleton Laboratory R89 Data Centre. The demo runs through a short quest of locating a malfunctioning server and replacing it.
 The project is intended for display at recruitment or STEM events to showcase opportunities of work for prospective software engineers. Potential proof of concept for future applications of VR within the science research industry, possibly for use in immersive safety training.
 
+The application makes use of the [VRTK Framework](https://vrtoolkit.readme.io/) to help drive and optimise its interactions.
+
 ## User Requirements
 
 Successfully running the VR application requires the following:
