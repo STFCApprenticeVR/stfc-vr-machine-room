@@ -1,45 +1,113 @@
 fileFormatVersion: 2
 guid: 7e8d9a1b656bf2042b3d360ac43363b7
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Door
-    100002: //RootNode
-    100004: DoorKnob
-    100006: DoorKnob.001
-    100008: Frame.001
-    100010: Glass
-    100012: Plating
-    400000: Door
-    400002: //RootNode
-    400004: DoorKnob
-    400006: DoorKnob.001
-    400008: Frame.001
-    400010: Glass
-    400012: Plating
-    2100000: No Name
-    2100002: Material
-    2300000: Door
-    2300002: DoorKnob
-    2300004: DoorKnob.001
-    2300006: Frame.001
-    2300008: Glass
-    2300010: Plating
-    3300000: Door
-    3300002: DoorKnob
-    3300004: DoorKnob.001
-    3300006: Frame.001
-    3300008: Glass
-    3300010: Plating
-    4300000: DoorKnob.001
-    4300002: DoorKnob
-    4300004: Frame.001
-    4300006: Glass
-    4300008: Plating
-    4300010: Door
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Door
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: DoorKnob
+  - first:
+      1: 100006
+    second: DoorKnob.001
+  - first:
+      1: 100008
+    second: Frame.001
+  - first:
+      1: 100010
+    second: Glass
+  - first:
+      1: 100012
+    second: Plating
+  - first:
+      4: 400000
+    second: Door
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: DoorKnob
+  - first:
+      4: 400006
+    second: DoorKnob.001
+  - first:
+      4: 400008
+    second: Frame.001
+  - first:
+      4: 400010
+    second: Glass
+  - first:
+      4: 400012
+    second: Plating
+  - first:
+      21: 2100000
+    second: No Name
+  - first:
+      21: 2100002
+    second: Material
+  - first:
+      23: 2300000
+    second: Door
+  - first:
+      23: 2300002
+    second: DoorKnob
+  - first:
+      23: 2300004
+    second: DoorKnob.001
+  - first:
+      23: 2300006
+    second: Frame.001
+  - first:
+      23: 2300008
+    second: Glass
+  - first:
+      23: 2300010
+    second: Plating
+  - first:
+      33: 3300000
+    second: Door
+  - first:
+      33: 3300002
+    second: DoorKnob
+  - first:
+      33: 3300004
+    second: DoorKnob.001
+  - first:
+      33: 3300006
+    second: Frame.001
+  - first:
+      33: 3300008
+    second: Glass
+  - first:
+      33: 3300010
+    second: Plating
+  - first:
+      43: 4300000
+    second: DoorKnob.001
+  - first:
+      43: 4300002
+    second: DoorKnob
+  - first:
+      43: 4300004
+    second: Frame.001
+  - first:
+      43: 4300006
+    second: Glass
+  - first:
+      43: 4300008
+    second: Plating
+  - first:
+      43: 4300010
+    second: Door
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -72,6 +140,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -79,18 +148,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -99,10 +169,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -112,13 +182,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
