@@ -8,34 +8,36 @@ using UnityEngine.SceneManagement;
 
 public class ResetButtonPressed : MonoBehaviour
 {
-    // Start is called before the first frame update
-    bool alreadyPressed = false;
-    public LightFade lightFade;
-
-    public InstructionsController instructionsController;
-
     public GameObject fakeNewServer;
     public GameObject alternateWinText;
+
+    //Button is only pressable once
+    bool alreadyPressed = false;
+       
+    public LightsController lightsController;
+    public InstructionsController instructionsController;
+
+    // Start is called before the first frame update
     void Start()
     {
+        // Call buttonpushed function when button is fully pushed
         GetComponent<VRTK_PhysicsPusher>().MaxLimitReached += new ControllableEventHandler(buttonPushed);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void buttonPushed(object sender, ControllableEventArgs e) {
         if (!alreadyPressed) {
+            // Turn lights back on
             alreadyPressed = true;
-            lightFade.lightsOn();
+            lightsController.lightsOn();
 
+            // If new server is already installed
             if (fakeNewServer.activeSelf) {
+                // Show game win text
                 alternateWinText.SetActive(true);
+                // Restart game after 10 seconds
                 Invoke("restart", 10f);
             } else {
+                // Show instructions to retreive new server
                 instructionsController.disableAll();
                 instructionsController.rightButton.SetActive(true);
                 instructionsController.storage.SetActive(true);
@@ -44,6 +46,7 @@ public class ResetButtonPressed : MonoBehaviour
     }
 
     void restart() {
+        // Reloading the scene resets state of all objects
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
