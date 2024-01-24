@@ -3126,4 +3126,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/DataCentre.unity
-  playerPath: C:/Users/qyn65326/stfc-vr-machine-room-1/RALDataCentreVR-Source/RALDataCentreVR.exe
+  playerPath: C:/Users/mcc19327/Documents/apprenticeVR/stfc-vr-machine-room/RALDataCentreVR-build-v3/RALDataCentreVR.exe
