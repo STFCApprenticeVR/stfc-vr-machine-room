@@ -7,29 +7,31 @@ using VRTK.Controllables.PhysicsBased;
 
 public class DeleteButtonPressed : MonoBehaviour
 {
-    // Start is called before the first frame update
-    bool alreadyPressed = false;
-    public LightFade lightFade;
+    public LightsController lightsController;
     public InstructionsController instructionsController;
+
+    // Button is only pressable once
+    private bool alreadyPressed = false;
+
+    // Start is called before the first frame update
     void Start()
     {
+        // Call buttonPushed function when button is fully pushed
         GetComponent<VRTK_PhysicsPusher>().MaxLimitReached += new ControllableEventHandler(buttonPushed);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void buttonPushed(object sender, ControllableEventArgs e) {
+        // If not already pressed
         if (!alreadyPressed) {
             alreadyPressed = true;
-            lightFade.lightsError();
 
+            // Set all lights to red
+            lightsController.lightsError();
+
+            // Show text for delete button pressed
             instructionsController.disableAll();
             instructionsController.wrongButton.SetActive(true);
-
+            // Win condition no longer possible
         }
     }
 }

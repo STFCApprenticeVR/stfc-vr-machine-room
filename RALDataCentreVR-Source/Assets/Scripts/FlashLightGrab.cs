@@ -11,12 +11,6 @@ public class FlashLightGrab : MonoBehaviour
         GetComponent<VRTK_InteractableObject>().InteractableObjectGrabbed += new InteractableObjectEventHandler(flashlightGrabbed);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void flashlightGrabbed (object sender, InteractableObjectEventArgs e) {
         this.GetComponent<Rigidbody>().isKinematic = true;
     }

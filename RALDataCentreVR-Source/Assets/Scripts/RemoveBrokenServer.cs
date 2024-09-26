@@ -13,38 +13,37 @@ public class RemoveBrokenServer : MonoBehaviour
     public GameObject sparks;
     public GameObject sparksBurst;
 
-    public LightFade lightFade;
-
     public GameObject flashlight;
 
+    // Snap zone for the replacement server
     public GameObject snapDrop;
 
+    public LightsController lightsController;
     public InstructionsController instructionsController;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        // Start with spark burst off
         sparksBurst.SetActive(false);
+        // Assign serverGrabbed function to the event generated when the server is grabbed
         GetComponent<VRTK_InteractableObject>().InteractableObjectGrabbed += new InteractableObjectEventHandler(serverGrabbed);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void serverGrabbed(object sender, InteractableObjectEventArgs e) {
         if (!alreadySized) {
+            // Trigger the burst of sparks, and disable the ongoing sparking system
             sparksBurst.SetActive(true);
             disableSparks();
 
             resizeServer();
 
-            lightFade.lightsOff();
+            // Use lightscontroller to disable all lights
+            lightsController.lightsOff();
+            // Enable the flashlight
             flashlight.SetActive(true);
-
+            // Enable the snap zone for the replacement server
             snapDrop.SetActive(true);
 
             instructionsController.disableAll();
@@ -55,7 +54,9 @@ public class RemoveBrokenServer : MonoBehaviour
     }
 
     void resizeServer() {
+        // If not already resized
         if (!alreadySized) {
+            // Uniformly rescale to make object more manageable
             Vector3 origScale = this.transform.localScale;
             this.transform.localScale = new Vector3(origScale.x * NewScale, origScale.y * NewScale, origScale.z * NewScale);
             alreadySized = true;
